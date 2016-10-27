@@ -6,6 +6,7 @@ import React, { Component, PropTypes } from 'react';
 import { processColor, requireNativeComponent, View } from 'react-native';
 
 export default class LinearGradient extends Component {
+  c: NativeLinearGradient;
   static propTypes = {
     start: PropTypes.arrayOf(PropTypes.number),
     end: PropTypes.arrayOf(PropTypes.number),
@@ -14,7 +15,7 @@ export default class LinearGradient extends Component {
     ...View.propTypes,
   };
 
-  setNativeProps(props) {
+  setNativeProps(props: Object) {
     this.c.setNativeProps(props);
   }
 
