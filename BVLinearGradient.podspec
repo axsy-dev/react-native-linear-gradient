@@ -13,6 +13,10 @@ Pod::Spec.new do |s|
   s.source          = { :git => "https://github.com/brentvatne/react-native-linear-gradient.git", :tag => "#{s.version}" }
   s.source_files    = 'BVLinearGradient/*.{h,m}'
   s.preserve_paths  = "**/*.js"
+
+  s.xcconfig = {
+    "HEADER_SEARCH_PATHS" => "${PODS_ROOT}/../../node_modules/react-native/React/Base"
+  }
   
   s.dependency 'React'
 
